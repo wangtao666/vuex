@@ -9,13 +9,12 @@
 <script>
   import {mapGetters,mapActions} from 'vuex'
   export default {
-    computed:mapGetters([
+    computed: mapGetters([]),
+    methods:  mapActions([
+        'increment',
+        'decrement'
+      ])
 
-    ]),
-    methods:mapActions([
-      'increment',
-      'decrement'
-    ])
   }
 </script>
 <style></style>
