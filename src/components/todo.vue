@@ -10,7 +10,7 @@
     <div :class="todo_content">
       <ul v-show="yes">
         <li v-for="(item,index) in titles" :key="index">
-          <input type="checkbox">
+          <input type="checkbox" ref="el_checkbox">
           <div :class="el_content" @click="choose(item)">
             <span>{{index+1}}.</span>
             <span>{{item.label}}</span>
@@ -36,6 +36,7 @@
   export default {
     data(){
       return{
+        el_checkbox:'',
         sure:{
           sure:true
         },
@@ -149,6 +150,7 @@
       },response => {
         alert('连接失败！');
       })
+      console.log(this.$refs.el_checkbox)
     }
   }
 </script>

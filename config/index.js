@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 // Template version: 1.2.5
 // see http://vuejs-templates.github.io/webpack for documentation.
 
@@ -8,6 +8,7 @@ module.exports = {
   dev: {
 
     // Paths
+    env:require('./dev.env'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
@@ -15,9 +16,9 @@ module.exports = {
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 9000, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: false,
-    errorOverlay: true,
-    notifyOnErrors: true,
+    autoOpenBrowser: true,
+    // errorOverlay: true,
+    // notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
     // Use Eslint Loader?
@@ -49,13 +50,14 @@ module.exports = {
   },
 
   build: {
+    // env:require('./prod.env'),
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps

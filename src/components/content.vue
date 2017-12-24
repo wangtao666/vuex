@@ -46,6 +46,7 @@
   }
 </script>
 <style>
+  #content{overflow-x: hidden}
   .c_back{
     display: block;
     width: 100%;
